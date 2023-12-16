@@ -10,6 +10,10 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
     <title>Breast Cancer Detection</title>
     <style>
       /*just bg and body style*/
@@ -117,6 +121,40 @@
         font-size: 20px;
         font-weight: bold;
       }
+
+      .extra-info {
+        display: none;
+        line-height: 30px;
+        font-size: 14px;
+        position: absolute;
+        top: 10px;
+        left: 50px;
+      }
+
+      .info:hover .extra-info {
+        display: block;
+      }
+
+      .info {
+        font-size: 20px;
+        font-weight: 500;
+        padding-left: 5px;
+        width: 20px;
+        border-radius: 15px;
+        transition: all 0.2s ease;
+      }
+
+      .info:hover {
+        background-color: rgba(220, 84, 152, 0.6);
+        padding: 0 0 0 5px;
+        width: 260px;
+        text-align: left !important;
+      }
+      .info a {
+        cursor: pointer;
+        color: #333;
+        text-decoration: none;
+      }
     </style>
 
     <!--Font Awesome-->
@@ -156,6 +194,19 @@
       <div class="row">
         <div class="col-md-12">
           <div class="btn-container">
+            <!-- info button -->
+            <div class="info">
+              <a
+                href="https://en.wikipedia.org/wiki/Breast_cancer"
+                target="_blank"
+              >
+                <i class="icon-info-sign"></i>
+                <span class="extra-info">
+                  Learn more about Breast Cancer
+                </span></a
+              >
+            </div>
+
             <h1 class="head">Breast Cancer Detection</h1>
             <!-- Main Input For Receiving Query to our ML -->
             <form

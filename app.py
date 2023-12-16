@@ -24,8 +24,10 @@ def predict():
     df = pd.DataFrame(features_value, columns=features_name)
     output = model.predict(df)
 
-    if output == 4:
-        res_val = "Breast cancer"
+    if output == 2:
+        res_val = "Benign type cancer"
+    elif output == 4:
+        res_val = "Malignant type cancer"
     else:
         res_val = "no Breast cancer"
 
